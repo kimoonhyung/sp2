@@ -1,0 +1,10 @@
+FROM ubuntu:20.04
+MAINTAINER DNS7282-2
+
+COPY ./lr2.cpp .
+COPY ./lr2.s .
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install build-essential -y
+RUN apt-get install gcc-multilib -y
+RUN apt-get install gdb -y
